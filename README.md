@@ -560,6 +560,18 @@ Input: `let binaryArray = [1,0,1,1,1,0,1]`
 
 Output: `93`
 
+```
+func binaryConvert(binaryArray: [Int]) -> UInt {
+var binaryString = ""
+for numbers in binaryArray {
+binaryString += String(numbers)
+}
+let number = strtoul(binaryString, nil, 2)
+return number
+}
+print(binaryConvert(binaryArray: [1,0,1,1,1,0,1]))
+```
+
 ## Question 25
 
 Write a function named `timeDifference`. It takes as input four numbers that represent two times in a day and returns the difference in minutes between them. The first two parameters `firstHour` and `firstMinute` represent the hour and minute of the first time. The last two `secondHour` and `secondMinute` represent the hour and minute of the second time. All parameters should have external parameter names with the same name as the local ones.
